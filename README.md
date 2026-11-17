@@ -3,7 +3,7 @@
 Name: Emirhan Mollahüseyinoğlu  
 Student number: 2100005226
 
-Bonuses claimed: **Bonus 2: Depth** (`js/bonus.mjs`) and **Bonus 3: Real code**. Both come before the log section.
+Bonuses claimed: **Bonus 2: Depth** (`js/bonus.mjs`), **Bonus 3: Real code** and **Bonus 4: Git repository**. All three come before the log section.
 
 Bütün örneklerde kendi akıllı ev projemdeki verileri kullandım (odalar, lambalar, klima, sıcaklıklar).
 Buradaki bütün çıktılar `npm run all` komutunun gerçek çıktısından kopyalandı, tamamı `output.txt` içinde.
@@ -1110,6 +1110,7 @@ const colorConfig = Object.entries(config).filter(
 - `taskReducer.ts` satır 78: `const last = state.past[state.past.length - 1]`. Bunu desenle yazamıyorum, çünkü rest en sonda olmak zorunda. `const [...oncekiler, last] = state.past` denedim: `SyntaxError: Rest element must be last element`. Dizinin başı için desen, sonu için index.
 
 ## My own log
+  https://github.com/EmirhanMollahuseyinoglu/Assigment-4
 
 Çalışırken çıkan gerçek hatalar ve beklediğimden farklı çıkan şeyler.
 
