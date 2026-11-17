@@ -1,0 +1,181 @@
+
+> destructuring-guide@0.0.0 all
+> npm run js && npm run ts && npm run bonus
+
+
+> destructuring-guide@0.0.0 js
+> node js/arrays.mjs && node js/objects.mjs && node js/params.mjs && node js/pitfalls.mjs && tsx js/props.jsx
+
+form 1: 19 26
+form 1 uzun yol: 19 26
+form 1 eksik eleman: 21 24 undefined
+form 2: mutfak [ 'yatak odası', 'banyo' ]
+form 2 spread: [ 'salon', 'mutfak', 'yatak odası', 'banyo', 'balkon' ]
+form 2 bos rest: salon []
+form 3: mutfak lambası salon lambası
+form 4: 50 beyaz
+form 4 undefined: 80 beyaz
+form 4 null: null sarı
+form 5: Salon Lambası açık
+form 5 uzun yol: Salon Lambası açık
+form 5 olmayan alan: undefined
+form 6: Salon Lambası
+form 7: 100
+form 7 isim + varsayilan: bilinmiyor
+form 7 alan varsa: açık
+form 8: c1 { ad: 'Salon Lambası', tur: 'lamba', durum: 'açık' }
+form 8 asil nesne: 4 alan
+form 9: Emirhan salon
+form 9 uzun yol: Emirhan salon
+form 10: lamba
+form 10 uzun yol: lamba
+form 11: { ad: 'Klima', durum: 'kapalı' }
+form 11 durum verildi: { ad: 'Klima', durum: 'açık' }
+form 11 argumansiz: { ad: undefined, durum: 'kapalı' }
+form 11 korumasiz: Cannot destructure property 'ad' of 'undefined' as it is undefined.
+form 11b: 2. kat, yatak odası
+form 12 nesne: salon 24
+form 12 nesne: mutfak 22
+form 12 nesne: banyo 26
+form 12 map: salon true
+form 12 map: mutfak false
+form 12 dizi: 0 lamba
+form 12 dizi: 1 klima
+form 12 nesne dizisi: Lamba 9
+form 12 nesne dizisi: Klima 1200
+tuzak 1: TypeError: Cannot destructure property 'ad' of 'cihazlar.find(...)' as it is undefined.
+tuzak 2: null beyaz
+tuzak 3: salon 1
+tuzak 4: Ali 3
+tuzak 5 nesne: mutfak 2
+tuzak 5 dizi: 2 mutfak
+tuzak 6: Kombi undefined
+P1 A: <section><h2>Salon</h2>2 cihaz açık</section>
+P1 B: <section><h2>Salon</h2>2 cihaz açık</section>
+P1 props nesnesi: { baslik: 'Salon', sayi: 2, children: 'içerik' }
+P2 etiket arasi: <section><h2>Mutfak</h2>ocak kapalı</section>
+P2 children prop: <section><h2>Mutfak</h2>ocak kapalı</section>
+P2 ikisi birden: <section><h2>Mutfak</h2>arada yazan</section>
+P3 string: <div>merhaba</div>
+P3 sayi: <div>24</div>
+P3 sifir: <div>0</div>
+P3 tek eleman: <div><b>klima</b></div>
+P3 birkac eleman: <div><b>klima</b><i>lamba</i></div>
+P3 undefined: <div></div>
+P3 hic yok: <div></div>
+P3 null: <div></div>
+P3 false: <div></div>
+P3 true: <div></div>
+P3 fonksiyon: <div></div>
+P3 fonksiyonu cagirinca: <div>Salon 24 derece</div>
+P3 tip: string | dizi mi: false
+P3 tip: object | dizi mi: false
+P3 tip: object | dizi mi: true
+P3 tip: undefined | dizi mi: false
+P4: <section id="salon" class="oda"><h2>Salon</h2>lamba açık</section>
+P4 once spread: <section class="kart">x</section>
+P4 sonra spread: <section class="benim">x</section>
+P4 ayirmadan: <section title="ipucu olur" id="x">y</section>
+P5 props ile: <div class="panel"><header><h2>Salon</h2></header><main><p>Lamba açık</p></main><footer>3 cihaz</footer></div>
+P5 children ile: <div class="panel"><header><h2>Salon</h2></header><main><p>Lamba açık</p></main><footer>3 cihaz</footer></div>
+P5 children ters sira: <div class="panel"><footer>3 cihaz</footer><header><h2>Salon</h2></header></div>
+P6 verilmedi: <p>Salon: %50</p>
+P6 undefined: <p>Salon: %50</p>
+P6 null: <p>Salon: %</p>
+P6 80: <p>Salon: %80</p>
+Deneme key: <p>key: undefined | ad: Lamba</p>
+Deneme props degistirme: TypeError: Cannot assign to read only property 'baslik' of object '#<Object>'
+Deneme props degistirme sonuc: <p>eski başlık</p>
+Deneme children yok: TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+
+> destructuring-guide@0.0.0 ts
+> tsx ts/arrays.ts && tsx ts/objects.ts && tsx ts/params.ts && tsx ts/types.ts && tsx ts/props.tsx
+
+form 1: 19 26
+form 2: MUTFAK [ 'yatak odası', 'banyo' ]
+form 3: mutfak lambası salon lambası
+form 4: 50 beyaz
+form 4 dizi: 11
+form 5: Salon Lambası açık
+form 6: Salon Lambası
+form 7: 101
+form 8: c1 { ad: 'Salon Lambası', tur: 'lamba', durum: 'açık' }
+form 9: Emirhan salon
+form 10: lamba
+form 11: { ad: 'Klima', durum: 'kapalı' }
+form 11 argumansiz: { ad: 'isimsiz', durum: 'kapalı' }
+form 11b: 2. kat, yatak odası
+form 12 nesne: salon 24.0
+form 12 nesne: mutfak 22.0
+form 12 nesne: banyo 26.0
+form 12 map: salon açık
+form 12 map: mutfak kapalı
+form 12 nesne dizisi: Lamba 9
+form 12 nesne dizisi: Klima 1200
+T1 yanlis: Klima
+T1 dogru: Klima 1200
+T2 tipsiz: 24 salon
+T2 tuple: 24.0 SALON
+T2 as const: 22 klima
+T3 kontrol: SALON
+T3 varsayilan: SALON
+T3 bos dizi: undefined
+T4: undefined 10
+T5 hatali satir (sansa calisti): 9
+T5 duzeltilmis: 0
+P1 A: <section><h2>Salon</h2>2 cihaz açık</section>
+P1 B: <section><h2>Salon</h2>2 cihaz açık</section>
+P2 etiket arasi: <section><h2>Mutfak</h2>ocak kapalı</section>
+P2 children prop: <section><h2>Mutfak</h2>ocak kapalı</section>
+P3 string: <div>merhaba</div>
+P3 sayi: <div>24</div>
+P3 tek eleman: <div><b>klima</b></div>
+P3 birkac eleman: <div><b>klima</b><i>lamba</i></div>
+P3 undefined: <div></div>
+P3 null: <div></div>
+P3 false: <div></div>
+P3 fonksiyon: <div>Salon 24 derece</div>
+P4: <section id="salon" class="oda"><h2>Salon</h2>lamba açık</section>
+P4 once spread: <section class="kart">x</section>
+P4 sonra spread: <section class="benim">x</section>
+P5 props ile: <div class="panel"><header><h2>Salon</h2></header><main><p>Lamba açık</p></main><footer>3 cihaz</footer></div>
+P5 children ile: <div class="panel"><header><h2>Salon</h2></header><main><p>Lamba açık</p></main><footer>3 cihaz</footer></div>
+P6 verilmedi: <p>Salon: %50</p>
+P6 undefined: <p>Salon: %50</p>
+P6 null: <p>Salon: %</p>
+P7 ReactNode bos: <span></span>
+P7 ReactNode dolu: <span>açık</span>
+P7 PropsWithChildren: <span style="color:red">sıcak</span>
+P7 ComponentProps: <button type="submit" disabled="">Kaydet</button>
+P7 sadece string: <b>KLIMA</b>
+
+> destructuring-guide@0.0.0 bonus
+> node js/bonus.mjs
+
+A1 string: k l [ 'i', 'm', 'a' ]
+A2 set: salon mutfak undefined
+A3 map: salon true
+   generator uretti: 1
+   generator uretti: 2
+A4 generator: 1 2
+   Symbol.iterator cagrildi
+   next cagrildi 1
+   next cagrildi 2
+   return cagrildi (desen isini bitirdi)
+A5 iterator: 10 20
+A6 duz nesne: TypeError: {(intermediate value)} is not iterable
+A7 diziye nesne deseni: 3 lamba
+B1 deger var: 80
+   pahaliVarsayilan CALISTI
+B1 deger yok: 50
+B2 onceki degisken: 100 200
+B3 sonraki degisken: ReferenceError: Cannot access 'b' before initialization
+B4 sira: 1 dolu 2 | sayac: 2
+C1 catch: TypeError | Cannot read properties of null (reading 'ad')
+C2 atama hedefi: { derece: 22, mod: 'soğutma' }
+C3 for...in: 0 string
+C3 for...in: 1 string
+C3 for...of: lamba 9
+C3 for...of: klima 1200
+C4 anahtarin ilk harfi: s
+C4 anahtarin ilk harfi: m
